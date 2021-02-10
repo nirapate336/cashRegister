@@ -152,12 +152,19 @@ namespace cashRegister
             inputBinders.Text = "";
             inputTendered.Text = "";
             inputPencil.Text = "";
+            binderAmount = 0;
+            pencilAmount = 0;
+            backpackAmount = 0;
 
-            outputSubTotal.Text = $"0.00";
-            outputTax.Text = $"0.00";
-            outputTotal.Text = $"0.00";
-            outputChange.Text = $"0.00";
+            subTotal = 0;
+            taxAmount = 0;
+            taxTotal = 0;
+            change = 0;
 
+            outputSubTotal.Text = $"{subTotal.ToString("C")}";
+            outputTax.Text = $"{taxAmount.ToString("C")}";
+            outputTotal.Text = $"{taxTotal.ToString("C")}";
+            outputChange.Text = $"{change.ToString("C")}";
 
 
 
