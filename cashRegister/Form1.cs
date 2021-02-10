@@ -47,9 +47,10 @@ namespace cashRegister
         private void TotalsButton_Click(object sender, EventArgs e)
         {// variable calculations
 
-           
-           
-          
+            try { 
+
+
+
             pencilAmount = Convert.ToInt32(inputPencil.Text);
             binderAmount = Convert.ToInt32(inputBinders.Text);
             backpackAmount = Convert.ToInt32(inputBackpacks.Text);
@@ -61,33 +62,36 @@ namespace cashRegister
             outputSubTotal.Text = $"{subTotal.ToString("C")}";
             outputTax.Text = $"{taxAmount.ToString("C")}";
             outputTotal.Text = $"{taxTotal.ToString("C")}";
-            
+
+
+            }
+
+            catch {
+
+                receiptOutput.Text = "Please enter a number";
 
 
 
-
-
-
-
-
+            }
 
         }
 
         private void ChangeButton_Click(object sender, EventArgs e)
         {
-           
-          
-          // change calculations
-            
-            tenderedAmount = Convert.ToInt32(inputTendered.Text);
+            try
+            {
+                // change calculations
 
-            change = tenderedAmount - taxTotal;
-            outputChange.Text = $"{change.ToString("C")}";
+                tenderedAmount = Convert.ToInt32(inputTendered.Text);
 
+                change = tenderedAmount - taxTotal;
+                outputChange.Text = $"{change.ToString("C")}";
+            }
+            catch
+            {
+                receiptOutput.Text = "Please enter a number";
 
-
-
-
+            }
         }
 
         private void ReceiptButton_Click(object sender, EventArgs e)
@@ -142,23 +146,17 @@ namespace cashRegister
 
         private void NewButton_Click(object sender, EventArgs e)
         {
-            binderAmount = 0;
-            pencilAmount = 0;
-            backpackAmount = 0;
+        // reset everything to be blank or be zero
 
-            subTotal = pencilAmount * pencilPrice + binderAmount * binderPrice + backpackAmount * backpackPrice;
-            taxAmount = subTotal * taxRate;
-            taxTotal = subTotal + taxAmount;
+            inputBackpacks.Text = "";
+            inputBinders.Text = "";
+            inputTendered.Text = "";
+            inputPencil.Text = "";
 
-
-            outputSubTotal.Text = $"{subTotal.ToString("C")}";
-            outputTax.Text = $"{taxAmount.ToString("C")}";
-            outputTotal.Text = $"{taxTotal.ToString("C")}";
-
-            tenderedAmount = Convert.ToInt32(inputTendered.Text);
-
-            change = tenderedAmount - taxTotal;
-            outputChange.Text = $"{change.ToString("C")}";
+            outputSubTotal.Text = $"0.00";
+            outputTax.Text = $"0.00";
+            outputTotal.Text = $"0.00";
+            outputChange.Text = $"0.00";
 
 
 
