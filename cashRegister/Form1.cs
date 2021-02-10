@@ -142,7 +142,26 @@ namespace cashRegister
 
         private void NewButton_Click(object sender, EventArgs e)
         {
-           
+            binderAmount = 0;
+            pencilAmount = 0;
+            backpackAmount = 0;
+
+            subTotal = pencilAmount * pencilPrice + binderAmount * binderPrice + backpackAmount * backpackPrice;
+            taxAmount = subTotal * taxRate;
+            taxTotal = subTotal + taxAmount;
+
+
+            outputSubTotal.Text = $"{subTotal.ToString("C")}";
+            outputTax.Text = $"{taxAmount.ToString("C")}";
+            outputTotal.Text = $"{taxTotal.ToString("C")}";
+
+            tenderedAmount = Convert.ToInt32(inputTendered.Text);
+
+            change = tenderedAmount - taxTotal;
+            outputChange.Text = $"{change.ToString("C")}";
+
+
+
 
 
 

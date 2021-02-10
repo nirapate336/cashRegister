@@ -58,7 +58,7 @@
             this.titleLabel.BackColor = System.Drawing.Color.Brown;
             this.titleLabel.Font = new System.Drawing.Font("Millenium BdEx BT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.titleLabel.Location = new System.Drawing.Point(-4, 27);
+            this.titleLabel.Location = new System.Drawing.Point(-2, 22);
             this.titleLabel.Name = "titleLabel";
             this.titleLabel.Size = new System.Drawing.Size(806, 56);
             this.titleLabel.TabIndex = 0;
