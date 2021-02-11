@@ -62,7 +62,7 @@ namespace cashRegister
             outputSubTotal.Text = $"{subTotal.ToString("C")}";
             outputTax.Text = $"{taxAmount.ToString("C")}";
             outputTotal.Text = $"{taxTotal.ToString("C")}";
-
+                receiptOutput.Text = "";
 
             }
 
@@ -82,14 +82,15 @@ namespace cashRegister
             {
                 // change calculations
 
-                tenderedAmount = Convert.ToInt32(inputTendered.Text);
+            tenderedAmount = Convert.ToInt32(inputTendered.Text);
 
-                change = tenderedAmount - taxTotal;
-                outputChange.Text = $"{change.ToString("C")}";
+            change = tenderedAmount - taxTotal;
+            outputChange.Text = $"{change.ToString("C")}";
+            receiptOutput.Text = "";
             }
             catch
             {
-                receiptOutput.Text = "Please enter a number";
+            receiptOutput.Text = "Please enter a number";
 
             }
         }
@@ -116,7 +117,7 @@ namespace cashRegister
             Thread.Sleep(1000);
             this.Refresh();
 
-            receiptOutput.Text += $"\n Tax  {taxAmount.ToString("C")}";
+            receiptOutput.Text += $"\n Tax {taxAmount.ToString("C")}";
             Thread.Sleep(1000);
             this.Refresh();
 
@@ -155,6 +156,8 @@ namespace cashRegister
             binderAmount = 0;
             pencilAmount = 0;
             backpackAmount = 0;
+            tenderedAmount = 0;
+
 
             subTotal = 0;
             taxAmount = 0;
