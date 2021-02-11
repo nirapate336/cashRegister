@@ -262,9 +262,9 @@
             this.receiptOutput.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.receiptOutput.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.receiptOutput.Image = ((System.Drawing.Image)(resources.GetObject("receiptOutput.Image")));
-            this.receiptOutput.Location = new System.Drawing.Point(369, 98);
+            this.receiptOutput.Location = new System.Drawing.Point(414, 98);
             this.receiptOutput.Name = "receiptOutput";
-            this.receiptOutput.Size = new System.Drawing.Size(398, 463);
+            this.receiptOutput.Size = new System.Drawing.Size(353, 463);
             this.receiptOutput.TabIndex = 20;
             this.receiptOutput.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
@@ -293,8 +293,9 @@
             this.titleLabel.Name = "titleLabel";
             this.titleLabel.Size = new System.Drawing.Size(801, 67);
             this.titleLabel.TabIndex = 23;
-            this.titleLabel.Text = "Funky\'s School Supply Shop";
+            this.titleLabel.Text = "----------------- Funky\'s School Supply Shop -----------------";
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.titleLabel.Click += new System.EventHandler(this.TitleLabel_Click);
             // 
             // Form1
             // 

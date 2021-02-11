@@ -68,7 +68,7 @@ namespace cashRegister
             outputTax.Text = $"{taxAmount.ToString("C")}";
             outputTotal.Text = $"{taxTotal.ToString("C")}";
             receiptOutput.Text = "";
-
+            receiptButton.Text = "Print Receipt";
             }
 
             catch {
@@ -98,6 +98,7 @@ namespace cashRegister
             change = tenderedAmount - taxTotal;
             outputChange.Text = $"{change.ToString("C")}";
             receiptOutput.Text = "";
+            receiptButton.Text = "Print Receipt";
             }
             catch
             {
@@ -119,70 +120,70 @@ namespace cashRegister
             this.Refresh();
 
 
-            receiptOutput.Text = $"Funky's School Supply Store    ";
+            receiptOutput.Text = $"Funky's School Supply Store            ";
             Thread.Sleep(1000);
             this.Refresh();
             SoundPlayer printOne = new SoundPlayer(Properties.Resources.printTwo);
             printOne.Play();
 
-            receiptOutput.Text += $"\n\n Pecils X {pencilAmount} @  {pencilPrice.ToString("C")}";
+            receiptOutput.Text += $"\n Pecils           X {pencilAmount} @  {pencilPrice.ToString("C")}";
             Thread.Sleep(1000);
             this.Refresh();
             SoundPlayer printTwo = new SoundPlayer(Properties.Resources.printTwo);
             printTwo.Play();
 
-            receiptOutput.Text += $"\n\n Binders X {binderAmount} @  {binderPrice.ToString("C")}";
+            receiptOutput.Text += $"\n\n Binders          X {binderAmount} @  {binderPrice.ToString("C")}";
             Thread.Sleep(1000);
             this.Refresh();
             SoundPlayer printThree = new SoundPlayer(Properties.Resources.printTwo);
             printThree.Play();
 
-            receiptOutput.Text += $"\n\n Backpacks X {backpackAmount} @ {backpackPrice.ToString("C")}";
-            Thread.Sleep(1000);
+            receiptOutput.Text += $"\n\n Backpacks        X {backpackAmount} @ {backpackPrice.ToString("C")}";
+            Thread.Sleep(1000); 
             this.Refresh();
             SoundPlayer printFour = new SoundPlayer(Properties.Resources.printTwo);
             printFour.Play();
 
 
-            receiptOutput.Text += $"\n\n\n Sub Total {subTotal.ToString("C")}";
+            receiptOutput.Text += $"\n\n\n Sub Total               {subTotal.ToString("C")}";
             Thread.Sleep(1000);
             this.Refresh();
             SoundPlayer printFive = new SoundPlayer(Properties.Resources.printTwo);
             printFive.Play();
 
 
-            receiptOutput.Text += $"\n\n Tax {taxAmount.ToString("C")}";
+            receiptOutput.Text += $"\n\n Tax                     {taxAmount.ToString("C")}";
             Thread.Sleep(1000);
             this.Refresh();
             SoundPlayer printSix = new SoundPlayer(Properties.Resources.printTwo);
             printSix.Play();
 
 
-            receiptOutput.Text += $"\n\n Total {taxTotal.ToString ("C")}";
+            receiptOutput.Text += $"\n\n Total                   {taxTotal.ToString ("C")}";
             Thread.Sleep(1000);
             this.Refresh();
             SoundPlayer printSeven = new SoundPlayer(Properties.Resources.printTwo);
             printSeven.Play();
 
 
-            receiptOutput.Text += $"\n\n\n\n Tendered {tenderedAmount.ToString("C")}";
+            receiptOutput.Text += $"\n\n\n\n Tendered                {tenderedAmount.ToString("C")}";
             Thread.Sleep(1000);
             this.Refresh();
             SoundPlayer printEight = new SoundPlayer(Properties.Resources.printTwo);
             printEight.Play();
 
 
-            receiptOutput.Text += $"\n\n Change  {change.ToString("C")}";
+            receiptOutput.Text += $"\n\n Change                  {change.ToString("C")}";
             Thread.Sleep(1000);
             this.Refresh();
             SoundPlayer printNine = new SoundPlayer(Properties.Resources.printTwo);
             printNine.Play();
 
 
-            receiptOutput.Text += $"\n\n Thank you for your purchase.     ";
+            receiptOutput.Text += $"\n\n Thank you for your purchase!          ";
             Thread.Sleep(1000);
-            this.Refresh();
-            receiptOutput.Text += $"\n\n Have a great day :)          ";
+            this.Refresh(); 
+            receiptOutput.Text += $"\n Have a great day   :)                          ";
             Thread.Sleep(1000);
             this.Refresh();
             SoundPlayer printTen = new SoundPlayer(Properties.Resources.service_bell_daniel_simion);
@@ -225,9 +226,10 @@ namespace cashRegister
         }
 
         private void TitleLabel_Click(object sender, EventArgs e)
-        {   // little easter egg hidden
-            titleLabel.Text = "Hello There";
+        {
+            titleLabel.Text = "Enjoy your shopping!";
 
         }
     }
-}
+    }
+
