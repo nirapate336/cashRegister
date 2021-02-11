@@ -171,6 +171,7 @@
             // changeButton
             // 
             this.changeButton.BackColor = System.Drawing.Color.Brown;
+            this.changeButton.Enabled = false;
             this.changeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.changeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.changeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -198,6 +199,7 @@
             // receiptButton
             // 
             this.receiptButton.BackColor = System.Drawing.Color.Brown;
+            this.receiptButton.Enabled = false;
             this.receiptButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.receiptButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.receiptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -215,31 +217,28 @@
             // 
             this.outputSubTotal.AutoSize = true;
             this.outputSubTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.outputSubTotal.Location = new System.Drawing.Point(232, 302);
+            this.outputSubTotal.Location = new System.Drawing.Point(240, 302);
             this.outputSubTotal.Name = "outputSubTotal";
             this.outputSubTotal.Size = new System.Drawing.Size(0, 16);
             this.outputSubTotal.TabIndex = 15;
-            this.outputSubTotal.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // outputTax
             // 
             this.outputTax.AutoSize = true;
             this.outputTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.outputTax.Location = new System.Drawing.Point(240, 333);
+            this.outputTax.Location = new System.Drawing.Point(240, 336);
             this.outputTax.Name = "outputTax";
             this.outputTax.Size = new System.Drawing.Size(0, 16);
             this.outputTax.TabIndex = 16;
-            this.outputTax.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // outputTotal
             // 
             this.outputTotal.AutoSize = true;
             this.outputTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.outputTotal.Location = new System.Drawing.Point(232, 374);
+            this.outputTotal.Location = new System.Drawing.Point(240, 375);
             this.outputTotal.Name = "outputTotal";
             this.outputTotal.Size = new System.Drawing.Size(0, 16);
             this.outputTotal.TabIndex = 17;
-            this.outputTotal.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // inputTendered
             // 

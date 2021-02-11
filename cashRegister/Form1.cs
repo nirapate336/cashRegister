@@ -12,9 +12,9 @@ using System.Media;
 
 
 namespace cashRegister
-{
+{       // Nirav Patel February 11 2021
     public partial class Form1 : Form
-    {// global variables that are zero
+    {   // global variables that are zero
         double pencilPrice = 1.25;
         double binderPrice = 3.00;
         double backpackPrice = 15.00;
@@ -29,21 +29,12 @@ namespace cashRegister
         double change;
 
 
-         
-
-
-
-
-
-
         public Form1()
-        {// global variables not zero/ that are calculations
+        {   // global variables not zero/ that are calculations
              
-
-          
-
             InitializeComponent();
         }
+
 
         private void TotalsButton_Click(object sender, EventArgs e)
         {
@@ -67,6 +58,8 @@ namespace cashRegister
             outputTotal.Text = $"{taxTotal.ToString("C")}";
             receiptOutput.Text = "";
             receiptButton.Text = "Print Receipt";
+            changeButton.Enabled = true;
+            
             }
 
             catch {
@@ -97,6 +90,7 @@ namespace cashRegister
             outputChange.Text = $"{change.ToString("C")}";
             receiptOutput.Text = "";
             receiptButton.Text = "Print Receipt";
+            receiptButton.Enabled = true;
             }
             catch
             {
@@ -142,13 +136,11 @@ namespace cashRegister
             SoundPlayer printFour = new SoundPlayer(Properties.Resources.printTwo);
             printFour.Play();
 
-
-            receiptOutput.Text += $"\n\n\n Sub Total               {subTotal.ToString("c")}";
+            receiptOutput.Text += $"\n\n\n Sub Total              {subTotal.ToString("c")}";
             Thread.Sleep(1000);
             this.Refresh();
             SoundPlayer printFive = new SoundPlayer(Properties.Resources.printTwo);
             printFive.Play();
-
 
             receiptOutput.Text += $"\n\n Tax                     {taxAmount.ToString("C")}";
             Thread.Sleep(1000);
@@ -156,27 +148,23 @@ namespace cashRegister
             SoundPlayer printSix = new SoundPlayer(Properties.Resources.printTwo);
             printSix.Play();
 
-
-            receiptOutput.Text += $"\n\n Total                   {taxTotal.ToString ("C")}";
+            receiptOutput.Text += $"\n\n Total                  {taxTotal.ToString ("C")}";
             Thread.Sleep(1000);
             this.Refresh();
             SoundPlayer printSeven = new SoundPlayer(Properties.Resources.printTwo);
             printSeven.Play();
 
-
-            receiptOutput.Text += $"\n\n\n\n Tendered                {tenderedAmount.ToString("C")}";
+            receiptOutput.Text += $"\n\n\n\n Tendered               {tenderedAmount.ToString("C")}";
             Thread.Sleep(1000);
             this.Refresh();
             SoundPlayer printEight = new SoundPlayer(Properties.Resources.printTwo);
             printEight.Play();
-
 
             receiptOutput.Text += $"\n\n Change                  {change.ToString("C")}";
             Thread.Sleep(1000);
             this.Refresh();
             SoundPlayer printNine = new SoundPlayer(Properties.Resources.printTwo);
             printNine.Play();
-
 
             receiptOutput.Text += $"\n\n Thank you for your purchase!          ";
             Thread.Sleep(1000);
@@ -186,7 +174,6 @@ namespace cashRegister
             this.Refresh();
             SoundPlayer printTen = new SoundPlayer(Properties.Resources.service_bell_daniel_simion);
             printTen.Play();
-
 
         }
 
@@ -202,24 +189,28 @@ namespace cashRegister
             inputBinders.Text = "";
             inputTendered.Text = "";
             inputPencil.Text = "";
+
             binderAmount = 0;
             pencilAmount = 0;
             backpackAmount = 0;
+
             tenderedAmount = 0;
-
-
             subTotal = 0;
             taxAmount = 0;
             taxTotal = 0;
             change = 0;
+
             //change outputs to zero
             outputSubTotal.Text = $"{subTotal.ToString("C")}";
             outputTax.Text = $"{taxAmount.ToString("C")}";
             outputTotal.Text = $"{taxTotal.ToString("C")}";
             outputChange.Text = $"{change.ToString("C")}";
+
             // Reset receipt functionality so it will print a receipt with zeros
             receiptButton.Text = "Print Receipt";
             receiptOutput.Text = "";
+            receiptButton.Enabled = false;
+            changeButton.Enabled = false;
 
         }
 
