@@ -63,6 +63,15 @@ namespace cashRegister.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Computer_Error_SoundBible_com_1655839472 {
+            get {
+                return ResourceManager.GetStream("Computer_Error_SoundBible_com_1655839472", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream counter_bell {
             get {
                 return ResourceManager.GetStream("counter_bell", resourceCulture);

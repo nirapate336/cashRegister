@@ -46,11 +46,15 @@ namespace cashRegister
         }
 
         private void TotalsButton_Click(object sender, EventArgs e)
-        {// variable calculations
+        {
+            // button sounds , and variable calculations
 
-            try { 
+            try {
 
-
+            SoundPlayer buttonOne = new SoundPlayer(Properties.Resources.service_bell_daniel_simion);
+            buttonOne.Play();
+            Thread.Sleep(1000);
+            this.Refresh();
 
             pencilAmount = Convert.ToInt32(inputPencil.Text);
             binderAmount = Convert.ToInt32(inputBinders.Text);
@@ -58,22 +62,22 @@ namespace cashRegister
             subTotal = pencilAmount * pencilPrice + binderAmount * binderPrice + backpackAmount * backpackPrice;
             taxAmount = subTotal * taxRate;
             taxTotal = subTotal + taxAmount;
-
-
+            
+            //Output text
             outputSubTotal.Text = $"{subTotal.ToString("C")}";
             outputTax.Text = $"{taxAmount.ToString("C")}";
             outputTotal.Text = $"{taxTotal.ToString("C")}";
-                receiptOutput.Text = "";
+            receiptOutput.Text = "";
 
             }
 
             catch {
-
-                receiptOutput.Text = "Please enter a number";
-                Thread.Sleep(1000);
-                this.Refresh();
-                SoundPlayer printErrorOne = new SoundPlayer(Properties.Resources.printTwo);
-                printErrorOne.Play();
+            // Error if input is incorrect
+            receiptOutput.Text = "Please enter a number";
+            Thread.Sleep(1000);
+            this.Refresh();
+            SoundPlayer printErrorOne = new SoundPlayer(Properties.Resources.Computer_Error_SoundBible_com_1655839472);
+            printErrorOne.Play();
 
 
             }
@@ -84,8 +88,11 @@ namespace cashRegister
         {
             try
             {
-                // change calculations
-
+            // change variable calculations
+            SoundPlayer buttonOne = new SoundPlayer(Properties.Resources.service_bell_daniel_simion);
+            buttonOne.Play();
+            Thread.Sleep(1000);
+            this.Refresh();
             tenderedAmount = Convert.ToInt32(inputTendered.Text);
 
             change = tenderedAmount - taxTotal;
@@ -94,51 +101,57 @@ namespace cashRegister
             }
             catch
             {
+            //Error if input is incorrect
             receiptOutput.Text = "Please enter a number";
             Thread.Sleep(1000);
             this.Refresh();
-            SoundPlayer printError = new SoundPlayer(Properties.Resources.printTwo);
+            SoundPlayer printError = new SoundPlayer(Properties.Resources.Computer_Error_SoundBible_com_1655839472);
              printError.Play();
             }
         }
 
         private void ReceiptButton_Click(object sender, EventArgs e)
-        {//printing the receipt with pauses and sounds in between
+        {   //printing the receipt with pauses and sounds in between
             receiptButton.Text = "Re-Print Receipt";
+            SoundPlayer buttonOne = new SoundPlayer(Properties.Resources.service_bell_daniel_simion);
+            buttonOne.Play();
+            Thread.Sleep(1000);
+            this.Refresh();
 
-            receiptOutput.Text = $"Funky's School Supply Store";
+
+            receiptOutput.Text = $"Funky's School Supply Store    ";
             Thread.Sleep(1000);
             this.Refresh();
             SoundPlayer printOne = new SoundPlayer(Properties.Resources.printTwo);
             printOne.Play();
 
-            receiptOutput.Text += $"\n\n\n Pecils X {pencilAmount} @  {pencilPrice.ToString("C")}";
+            receiptOutput.Text += $"\n\n Pecils X {pencilAmount} @  {pencilPrice.ToString("C")}";
             Thread.Sleep(1000);
             this.Refresh();
             SoundPlayer printTwo = new SoundPlayer(Properties.Resources.printTwo);
             printTwo.Play();
 
-            receiptOutput.Text += $"\n Binders X {binderAmount} @  {binderPrice.ToString("C")}";
+            receiptOutput.Text += $"\n\n Binders X {binderAmount} @  {binderPrice.ToString("C")}";
             Thread.Sleep(1000);
             this.Refresh();
             SoundPlayer printThree = new SoundPlayer(Properties.Resources.printTwo);
             printThree.Play();
 
-            receiptOutput.Text += $"\n Backpacks X {backpackAmount} @ {backpackPrice.ToString("C")}";
+            receiptOutput.Text += $"\n\n Backpacks X {backpackAmount} @ {backpackPrice.ToString("C")}";
             Thread.Sleep(1000);
             this.Refresh();
             SoundPlayer printFour = new SoundPlayer(Properties.Resources.printTwo);
             printFour.Play();
 
 
-            receiptOutput.Text += $"\n\n Sub Total {subTotal.ToString("C")}";
+            receiptOutput.Text += $"\n\n\n Sub Total {subTotal.ToString("C")}";
             Thread.Sleep(1000);
             this.Refresh();
             SoundPlayer printFive = new SoundPlayer(Properties.Resources.printTwo);
             printFive.Play();
 
 
-            receiptOutput.Text += $"\n Tax {taxAmount.ToString("C")}";
+            receiptOutput.Text += $"\n\n Tax {taxAmount.ToString("C")}";
             Thread.Sleep(1000);
             this.Refresh();
             SoundPlayer printSix = new SoundPlayer(Properties.Resources.printTwo);
@@ -152,24 +165,24 @@ namespace cashRegister
             printSeven.Play();
 
 
-            receiptOutput.Text += $"\n\n Tendered {tenderedAmount.ToString("C")}";
+            receiptOutput.Text += $"\n\n\n\n Tendered {tenderedAmount.ToString("C")}";
             Thread.Sleep(1000);
             this.Refresh();
             SoundPlayer printEight = new SoundPlayer(Properties.Resources.printTwo);
             printEight.Play();
 
 
-            receiptOutput.Text += $"\n Change  {change.ToString("C")}";
+            receiptOutput.Text += $"\n\n Change  {change.ToString("C")}";
             Thread.Sleep(1000);
             this.Refresh();
             SoundPlayer printNine = new SoundPlayer(Properties.Resources.printTwo);
             printNine.Play();
 
 
-            receiptOutput.Text += $"\n\n Thank you for your purchase. ";
+            receiptOutput.Text += $"\n\n Thank you for your purchase.     ";
             Thread.Sleep(1000);
             this.Refresh();
-            receiptOutput.Text += $"\n Have a great day :)";
+            receiptOutput.Text += $"\n\n Have a great day :)          ";
             Thread.Sleep(1000);
             this.Refresh();
             SoundPlayer printTen = new SoundPlayer(Properties.Resources.service_bell_daniel_simion);
@@ -180,7 +193,11 @@ namespace cashRegister
 
         private void NewButton_Click(object sender, EventArgs e)
         {
-        // reset everything to be blank or be zero
+            // reset everything to be blank 
+            SoundPlayer buttonOne = new SoundPlayer(Properties.Resources.service_bell_daniel_simion);
+            buttonOne.Play();
+            Thread.Sleep(1000);
+            this.Refresh();
 
             inputBackpacks.Text = "";
             inputBinders.Text = "";
@@ -196,24 +213,19 @@ namespace cashRegister
             taxAmount = 0;
             taxTotal = 0;
             change = 0;
-
+            //change outputs to zero
             outputSubTotal.Text = $"{subTotal.ToString("C")}";
             outputTax.Text = $"{taxAmount.ToString("C")}";
             outputTotal.Text = $"{taxTotal.ToString("C")}";
             outputChange.Text = $"{change.ToString("C")}";
-
+            // Reset receipt functionality
             receiptButton.Text = "Print Receipt";
-
-            
-
-
-
-
+            receiptOutput.Text = "";
 
         }
 
         private void TitleLabel_Click(object sender, EventArgs e)
-        {
+        {   // little easter egg hidden
             titleLabel.Text = "Hello There";
 
         }

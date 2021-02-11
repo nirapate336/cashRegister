@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.titleLabel = new System.Windows.Forms.Label();
             this.pencilLabel = new System.Windows.Forms.Label();
             this.binderLabel = new System.Windows.Forms.Label();
             this.backpackLabel = new System.Windows.Forms.Label();
@@ -51,20 +50,8 @@
             this.outputChange = new System.Windows.Forms.Label();
             this.receiptOutput = new System.Windows.Forms.Label();
             this.newButton = new System.Windows.Forms.Button();
+            this.titleLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // titleLabel
-            // 
-            this.titleLabel.BackColor = System.Drawing.Color.Brown;
-            this.titleLabel.Font = new System.Drawing.Font("Normande BT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.titleLabel.Location = new System.Drawing.Point(-2, -2);
-            this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(806, 87);
-            this.titleLabel.TabIndex = 0;
-            this.titleLabel.Text = "Funky\'s School Supply Store";
-            this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.titleLabel.Click += new System.EventHandler(this.TitleLabel_Click);
             // 
             // pencilLabel
             // 
@@ -126,7 +113,7 @@
             this.totalsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.totalsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.totalsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.totalsButton.Font = new System.Drawing.Font("Baskerville Win95BT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalsButton.Font = new System.Drawing.Font("Machine BT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalsButton.ForeColor = System.Drawing.Color.White;
             this.totalsButton.Location = new System.Drawing.Point(28, 244);
             this.totalsButton.Name = "totalsButton";
@@ -186,7 +173,7 @@
             this.changeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.changeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.changeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.changeButton.Font = new System.Drawing.Font("Baskerville Win95BT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changeButton.Font = new System.Drawing.Font("Machine BT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.changeButton.ForeColor = System.Drawing.Color.White;
             this.changeButton.Location = new System.Drawing.Point(28, 482);
             this.changeButton.Name = "changeButton";
@@ -213,7 +200,7 @@
             this.receiptButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.receiptButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.receiptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.receiptButton.Font = new System.Drawing.Font("Baskerville Win95BT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.receiptButton.Font = new System.Drawing.Font("Machine BT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.receiptButton.ForeColor = System.Drawing.Color.White;
             this.receiptButton.Location = new System.Drawing.Point(29, 584);
             this.receiptButton.Name = "receiptButton";
@@ -231,15 +218,17 @@
             this.outputSubTotal.Name = "outputSubTotal";
             this.outputSubTotal.Size = new System.Drawing.Size(0, 16);
             this.outputSubTotal.TabIndex = 15;
+            this.outputSubTotal.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // outputTax
             // 
             this.outputTax.AutoSize = true;
             this.outputTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.outputTax.Location = new System.Drawing.Point(232, 333);
+            this.outputTax.Location = new System.Drawing.Point(240, 333);
             this.outputTax.Name = "outputTax";
             this.outputTax.Size = new System.Drawing.Size(0, 16);
             this.outputTax.TabIndex = 16;
+            this.outputTax.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // outputTotal
             // 
@@ -249,6 +238,7 @@
             this.outputTotal.Name = "outputTotal";
             this.outputTotal.Size = new System.Drawing.Size(0, 16);
             this.outputTotal.TabIndex = 17;
+            this.outputTotal.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // inputTendered
             // 
@@ -265,11 +255,13 @@
             this.outputChange.Name = "outputChange";
             this.outputChange.Size = new System.Drawing.Size(0, 16);
             this.outputChange.TabIndex = 19;
+            this.outputChange.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // receiptOutput
             // 
             this.receiptOutput.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.receiptOutput.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.receiptOutput.Image = ((System.Drawing.Image)(resources.GetObject("receiptOutput.Image")));
             this.receiptOutput.Location = new System.Drawing.Point(369, 98);
             this.receiptOutput.Name = "receiptOutput";
             this.receiptOutput.Size = new System.Drawing.Size(398, 463);
@@ -282,7 +274,7 @@
             this.newButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.newButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.newButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.newButton.Font = new System.Drawing.Font("Baskerville Win95BT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newButton.Font = new System.Drawing.Font("Machine BT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newButton.ForeColor = System.Drawing.Color.White;
             this.newButton.Location = new System.Drawing.Point(372, 584);
             this.newButton.Name = "newButton";
@@ -292,12 +284,25 @@
             this.newButton.UseVisualStyleBackColor = false;
             this.newButton.Click += new System.EventHandler(this.NewButton_Click);
             // 
+            // titleLabel
+            // 
+            this.titleLabel.BackColor = System.Drawing.Color.Brown;
+            this.titleLabel.Font = new System.Drawing.Font("Machine BT", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.titleLabel.Location = new System.Drawing.Point(0, 9);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(801, 67);
+            this.titleLabel.TabIndex = 23;
+            this.titleLabel.Text = "Funky\'s School Supply Shop";
+            this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(793, 645);
+            this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.newButton);
             this.Controls.Add(this.receiptOutput);
             this.Controls.Add(this.outputChange);
@@ -319,7 +324,6 @@
             this.Controls.Add(this.backpackLabel);
             this.Controls.Add(this.binderLabel);
             this.Controls.Add(this.pencilLabel);
-            this.Controls.Add(this.titleLabel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "School Supply Store Cash Register";
@@ -329,8 +333,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.Label pencilLabel;
         private System.Windows.Forms.Label binderLabel;
         private System.Windows.Forms.Label backpackLabel;
@@ -352,6 +354,7 @@
         private System.Windows.Forms.Label outputChange;
         private System.Windows.Forms.Label receiptOutput;
         private System.Windows.Forms.Button newButton;
+        private System.Windows.Forms.Label titleLabel;
     }
 }
 
