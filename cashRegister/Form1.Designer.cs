@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.titleLabel = new System.Windows.Forms.Label();
             this.pencilLabel = new System.Windows.Forms.Label();
             this.binderLabel = new System.Windows.Forms.Label();
@@ -49,21 +50,21 @@
             this.inputTendered = new System.Windows.Forms.TextBox();
             this.outputChange = new System.Windows.Forms.Label();
             this.receiptOutput = new System.Windows.Forms.Label();
-            this.seperationLabel = new System.Windows.Forms.Label();
             this.newButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // titleLabel
             // 
             this.titleLabel.BackColor = System.Drawing.Color.Brown;
-            this.titleLabel.Font = new System.Drawing.Font("Millenium BdEx BT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLabel.Font = new System.Drawing.Font("Normande BT", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.titleLabel.Location = new System.Drawing.Point(-2, 22);
+            this.titleLabel.Location = new System.Drawing.Point(-2, -2);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(806, 56);
+            this.titleLabel.Size = new System.Drawing.Size(806, 87);
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "Funky\'s School Supply Store";
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.titleLabel.Click += new System.EventHandler(this.TitleLabel_Click);
             // 
             // pencilLabel
             // 
@@ -114,19 +115,25 @@
             // 
             // inputBackpacks
             // 
-            this.inputBackpacks.Location = new System.Drawing.Point(226, 199);
+            this.inputBackpacks.Location = new System.Drawing.Point(229, 199);
             this.inputBackpacks.Name = "inputBackpacks";
-            this.inputBackpacks.Size = new System.Drawing.Size(100, 20);
+            this.inputBackpacks.Size = new System.Drawing.Size(97, 20);
             this.inputBackpacks.TabIndex = 6;
             // 
             // totalsButton
             // 
+            this.totalsButton.BackColor = System.Drawing.Color.Brown;
+            this.totalsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.totalsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.totalsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.totalsButton.Font = new System.Drawing.Font("Baskerville Win95BT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalsButton.ForeColor = System.Drawing.Color.White;
             this.totalsButton.Location = new System.Drawing.Point(28, 244);
             this.totalsButton.Name = "totalsButton";
             this.totalsButton.Size = new System.Drawing.Size(298, 39);
             this.totalsButton.TabIndex = 7;
             this.totalsButton.Text = "Calculate Totals";
-            this.totalsButton.UseVisualStyleBackColor = true;
+            this.totalsButton.UseVisualStyleBackColor = false;
             this.totalsButton.Click += new System.EventHandler(this.TotalsButton_Click);
             // 
             // subtotalLabel
@@ -175,12 +182,18 @@
             // 
             // changeButton
             // 
-            this.changeButton.Location = new System.Drawing.Point(29, 507);
+            this.changeButton.BackColor = System.Drawing.Color.Brown;
+            this.changeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.changeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.changeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.changeButton.Font = new System.Drawing.Font("Baskerville Win95BT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.changeButton.ForeColor = System.Drawing.Color.White;
+            this.changeButton.Location = new System.Drawing.Point(28, 482);
             this.changeButton.Name = "changeButton";
             this.changeButton.Size = new System.Drawing.Size(297, 40);
             this.changeButton.TabIndex = 12;
             this.changeButton.Text = "Calculate Change";
-            this.changeButton.UseVisualStyleBackColor = true;
+            this.changeButton.UseVisualStyleBackColor = false;
             this.changeButton.Click += new System.EventHandler(this.ChangeButton_Click);
             // 
             // changeLabel
@@ -188,7 +201,7 @@
             this.changeLabel.AutoSize = true;
             this.changeLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.changeLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.changeLabel.Location = new System.Drawing.Point(25, 562);
+            this.changeLabel.Location = new System.Drawing.Point(25, 545);
             this.changeLabel.Name = "changeLabel";
             this.changeLabel.Size = new System.Drawing.Size(67, 19);
             this.changeLabel.TabIndex = 13;
@@ -196,12 +209,18 @@
             // 
             // receiptButton
             // 
-            this.receiptButton.Location = new System.Drawing.Point(371, 102);
+            this.receiptButton.BackColor = System.Drawing.Color.Brown;
+            this.receiptButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.receiptButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.receiptButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.receiptButton.Font = new System.Drawing.Font("Baskerville Win95BT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.receiptButton.ForeColor = System.Drawing.Color.White;
+            this.receiptButton.Location = new System.Drawing.Point(29, 584);
             this.receiptButton.Name = "receiptButton";
-            this.receiptButton.Size = new System.Drawing.Size(395, 33);
+            this.receiptButton.Size = new System.Drawing.Size(297, 49);
             this.receiptButton.TabIndex = 14;
             this.receiptButton.Text = " Print Receipt";
-            this.receiptButton.UseVisualStyleBackColor = true;
+            this.receiptButton.UseVisualStyleBackColor = false;
             this.receiptButton.Click += new System.EventHandler(this.ReceiptButton_Click);
             // 
             // outputSubTotal
@@ -242,7 +261,7 @@
             // 
             this.outputChange.AutoSize = true;
             this.outputChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.outputChange.Location = new System.Drawing.Point(223, 564);
+            this.outputChange.Location = new System.Drawing.Point(232, 545);
             this.outputChange.Name = "outputChange";
             this.outputChange.Size = new System.Drawing.Size(0, 16);
             this.outputChange.TabIndex = 19;
@@ -251,28 +270,26 @@
             // 
             this.receiptOutput.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.receiptOutput.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.receiptOutput.Location = new System.Drawing.Point(368, 143);
+            this.receiptOutput.Location = new System.Drawing.Point(369, 98);
             this.receiptOutput.Name = "receiptOutput";
-            this.receiptOutput.Size = new System.Drawing.Size(398, 404);
+            this.receiptOutput.Size = new System.Drawing.Size(398, 463);
             this.receiptOutput.TabIndex = 20;
             this.receiptOutput.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // seperationLabel
-            // 
-            this.seperationLabel.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.seperationLabel.Location = new System.Drawing.Point(-15, 405);
-            this.seperationLabel.Name = "seperationLabel";
-            this.seperationLabel.Size = new System.Drawing.Size(344, 16);
-            this.seperationLabel.TabIndex = 21;
-            // 
             // newButton
             // 
-            this.newButton.Location = new System.Drawing.Point(372, 562);
+            this.newButton.BackColor = System.Drawing.Color.Brown;
+            this.newButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.newButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.newButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newButton.Font = new System.Drawing.Font("Baskerville Win95BT", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newButton.ForeColor = System.Drawing.Color.White;
+            this.newButton.Location = new System.Drawing.Point(372, 584);
             this.newButton.Name = "newButton";
             this.newButton.Size = new System.Drawing.Size(394, 48);
             this.newButton.TabIndex = 22;
             this.newButton.Text = "New Order";
-            this.newButton.UseVisualStyleBackColor = true;
+            this.newButton.UseVisualStyleBackColor = false;
             this.newButton.Click += new System.EventHandler(this.NewButton_Click);
             // 
             // Form1
@@ -282,7 +299,6 @@
             this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(793, 645);
             this.Controls.Add(this.newButton);
-            this.Controls.Add(this.seperationLabel);
             this.Controls.Add(this.receiptOutput);
             this.Controls.Add(this.outputChange);
             this.Controls.Add(this.inputTendered);
@@ -304,8 +320,9 @@
             this.Controls.Add(this.binderLabel);
             this.Controls.Add(this.pencilLabel);
             this.Controls.Add(this.titleLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Furniture Store";
+            this.Text = "School Supply Store Cash Register";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,7 +351,6 @@
         private System.Windows.Forms.TextBox inputTendered;
         private System.Windows.Forms.Label outputChange;
         private System.Windows.Forms.Label receiptOutput;
-        private System.Windows.Forms.Label seperationLabel;
         private System.Windows.Forms.Button newButton;
     }
 }
