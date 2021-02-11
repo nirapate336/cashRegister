@@ -51,6 +51,7 @@
             this.receiptOutput = new System.Windows.Forms.Label();
             this.newButton = new System.Windows.Forms.Button();
             this.titleLabel = new System.Windows.Forms.Label();
+            this.decorationLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // pencilLabel
@@ -204,7 +205,7 @@
             this.receiptButton.ForeColor = System.Drawing.Color.White;
             this.receiptButton.Location = new System.Drawing.Point(29, 584);
             this.receiptButton.Name = "receiptButton";
-            this.receiptButton.Size = new System.Drawing.Size(297, 49);
+            this.receiptButton.Size = new System.Drawing.Size(300, 49);
             this.receiptButton.TabIndex = 14;
             this.receiptButton.Text = " Print Receipt";
             this.receiptButton.UseVisualStyleBackColor = false;
@@ -276,9 +277,9 @@
             this.newButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.newButton.Font = new System.Drawing.Font("Machine BT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newButton.ForeColor = System.Drawing.Color.White;
-            this.newButton.Location = new System.Drawing.Point(372, 584);
+            this.newButton.Location = new System.Drawing.Point(412, 584);
             this.newButton.Name = "newButton";
-            this.newButton.Size = new System.Drawing.Size(394, 48);
+            this.newButton.Size = new System.Drawing.Size(354, 48);
             this.newButton.TabIndex = 22;
             this.newButton.Text = "New Order";
             this.newButton.UseVisualStyleBackColor = false;
@@ -297,12 +298,24 @@
             this.titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.titleLabel.Click += new System.EventHandler(this.TitleLabel_Click);
             // 
+            // decorationLabel
+            // 
+            this.decorationLabel.BackColor = System.Drawing.Color.Transparent;
+            this.decorationLabel.Font = new System.Drawing.Font("Machine BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decorationLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.decorationLabel.Location = new System.Drawing.Point(367, 76);
+            this.decorationLabel.Name = "decorationLabel";
+            this.decorationLabel.Size = new System.Drawing.Size(10, 582);
+            this.decorationLabel.TabIndex = 24;
+            this.decorationLabel.Text = "IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(793, 645);
+            this.Controls.Add(this.decorationLabel);
             this.Controls.Add(this.titleLabel);
             this.Controls.Add(this.newButton);
             this.Controls.Add(this.receiptOutput);
@@ -356,6 +369,7 @@
         private System.Windows.Forms.Label receiptOutput;
         private System.Windows.Forms.Button newButton;
         private System.Windows.Forms.Label titleLabel;
+        private System.Windows.Forms.Label decorationLabel;
     }
 }
 

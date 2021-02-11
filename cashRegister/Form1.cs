@@ -47,10 +47,8 @@ namespace cashRegister
 
         private void TotalsButton_Click(object sender, EventArgs e)
         {
-            // button sounds , and variable calculations
-
-            try {
-
+         try {
+            // button sounds, and variable calculations
             SoundPlayer buttonOne = new SoundPlayer(Properties.Resources.service_bell_daniel_simion);
             buttonOne.Play();
             Thread.Sleep(1000);
@@ -126,26 +124,26 @@ namespace cashRegister
             SoundPlayer printOne = new SoundPlayer(Properties.Resources.printTwo);
             printOne.Play();
 
-            receiptOutput.Text += $"\n Pecils           X {pencilAmount} @  {pencilPrice.ToString("C")}";
+            receiptOutput.Text += $"\n Pencils          X {pencilAmount} @ $ {pencilPrice.ToString(".00")}";
             Thread.Sleep(1000);
             this.Refresh();
             SoundPlayer printTwo = new SoundPlayer(Properties.Resources.printTwo);
             printTwo.Play();
 
-            receiptOutput.Text += $"\n\n Binders          X {binderAmount} @  {binderPrice.ToString("C")}";
+            receiptOutput.Text += $"\n\n Binders          X {binderAmount} @ $ {binderPrice.ToString(".00")}";
             Thread.Sleep(1000);
             this.Refresh();
             SoundPlayer printThree = new SoundPlayer(Properties.Resources.printTwo);
             printThree.Play();
 
-            receiptOutput.Text += $"\n\n Backpacks        X {backpackAmount} @ {backpackPrice.ToString("C")}";
+            receiptOutput.Text += $"\n\n Backpacks        X {backpackAmount} @ ${backpackPrice.ToString(".00")}";
             Thread.Sleep(1000); 
             this.Refresh();
             SoundPlayer printFour = new SoundPlayer(Properties.Resources.printTwo);
             printFour.Play();
 
 
-            receiptOutput.Text += $"\n\n\n Sub Total               {subTotal.ToString("C")}";
+            receiptOutput.Text += $"\n\n\n Sub Total               {subTotal.ToString("c")}";
             Thread.Sleep(1000);
             this.Refresh();
             SoundPlayer printFive = new SoundPlayer(Properties.Resources.printTwo);
@@ -219,14 +217,14 @@ namespace cashRegister
             outputTax.Text = $"{taxAmount.ToString("C")}";
             outputTotal.Text = $"{taxTotal.ToString("C")}";
             outputChange.Text = $"{change.ToString("C")}";
-            // Reset receipt functionality
+            // Reset receipt functionality so it will print a receipt with zeros
             receiptButton.Text = "Print Receipt";
             receiptOutput.Text = "";
 
         }
 
         private void TitleLabel_Click(object sender, EventArgs e)
-        {
+        {   // little easter egg 
             titleLabel.Text = "Enjoy your shopping!";
 
         }
