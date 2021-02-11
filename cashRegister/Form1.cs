@@ -31,44 +31,46 @@ namespace cashRegister
 
         public Form1()
         {   // global variables not zero/ that are calculations
-             
+
             InitializeComponent();
         }
 
 
         private void TotalsButton_Click(object sender, EventArgs e)
         {
-         try {
-            // button sounds, and variable calculations
-            SoundPlayer buttonOne = new SoundPlayer(Properties.Resources.service_bell_daniel_simion);
-            buttonOne.Play();
-            Thread.Sleep(1000);
-            this.Refresh();
+            try
+            {
+                // button sounds, and variable calculations
+                SoundPlayer buttonOne = new SoundPlayer(Properties.Resources.service_bell_daniel_simion);
+                buttonOne.Play();
+                Thread.Sleep(1000);
+                this.Refresh();
 
-            pencilAmount = Convert.ToInt32(inputPencil.Text);
-            binderAmount = Convert.ToInt32(inputBinders.Text);
-            backpackAmount = Convert.ToInt32(inputBackpacks.Text);
-            subTotal = pencilAmount * pencilPrice + binderAmount * binderPrice + backpackAmount * backpackPrice;
-            taxAmount = subTotal * taxRate;
-            taxTotal = subTotal + taxAmount;
-            
-            //Output text
-            outputSubTotal.Text = $"{subTotal.ToString("C")}";
-            outputTax.Text = $"{taxAmount.ToString("C")}";
-            outputTotal.Text = $"{taxTotal.ToString("C")}";
-            receiptOutput.Text = "";
-            receiptButton.Text = "Print Receipt";
-            changeButton.Enabled = true;
-            
+                pencilAmount = Convert.ToInt32(inputPencil.Text);
+                binderAmount = Convert.ToInt32(inputBinders.Text);
+                backpackAmount = Convert.ToInt32(inputBackpacks.Text);
+                subTotal = pencilAmount * pencilPrice + binderAmount * binderPrice + backpackAmount * backpackPrice;
+                taxAmount = subTotal * taxRate;
+                taxTotal = subTotal + taxAmount;
+
+                //Output text
+                outputSubTotal.Text = $"{subTotal.ToString("C")}";
+                outputTax.Text = $"{taxAmount.ToString("C")}";
+                outputTotal.Text = $"{taxTotal.ToString("C")}";
+                receiptOutput.Text = "";
+                receiptButton.Text = "Print Receipt";
+                changeButton.Enabled = true;
+
             }
 
-            catch {
-            // Error if input is incorrect
-            receiptOutput.Text = "Please enter a number";
-            Thread.Sleep(1000);
-            this.Refresh();
-            SoundPlayer printErrorOne = new SoundPlayer(Properties.Resources.Computer_Error_SoundBible_com_1655839472);
-            printErrorOne.Play();
+            catch
+            {
+                // Error if input is incorrect
+                receiptOutput.Text = "Please enter a number";
+                Thread.Sleep(1000);
+                this.Refresh();
+                SoundPlayer printErrorOne = new SoundPlayer(Properties.Resources.Computer_Error_SoundBible_com_1655839472);
+                printErrorOne.Play();
 
 
             }
@@ -79,27 +81,28 @@ namespace cashRegister
         {
             try
             {
-            // change variable calculations
-            SoundPlayer buttonOne = new SoundPlayer(Properties.Resources.service_bell_daniel_simion);
-            buttonOne.Play();
-            Thread.Sleep(1000);
-            this.Refresh();
-            tenderedAmount = Convert.ToInt32(inputTendered.Text);
+                // change variable calculations
+                SoundPlayer buttonOne = new SoundPlayer(Properties.Resources.service_bell_daniel_simion);
+                buttonOne.Play();
+                Thread.Sleep(1000);
+                this.Refresh();
+                tenderedAmount = Convert.ToDouble(inputTendered.Text);
 
-            change = tenderedAmount - taxTotal;
-            outputChange.Text = $"{change.ToString("C")}";
-            receiptOutput.Text = "";
-            receiptButton.Text = "Print Receipt";
-            receiptButton.Enabled = true;
+
+                change = tenderedAmount - taxTotal;
+                outputChange.Text = $"{change.ToString("C")}";
+                receiptOutput.Text = "";
+                receiptButton.Text = "Print Receipt";
+                receiptButton.Enabled = true;
             }
             catch
             {
-            //Error if input is incorrect
-            receiptOutput.Text = "Please enter a number";
-            Thread.Sleep(1000);
-            this.Refresh();
-            SoundPlayer printError = new SoundPlayer(Properties.Resources.Computer_Error_SoundBible_com_1655839472);
-             printError.Play();
+                //Error if input is incorrect
+                receiptOutput.Text = "Please enter a number";
+                Thread.Sleep(1000);
+                this.Refresh();
+                SoundPlayer printError = new SoundPlayer(Properties.Resources.Computer_Error_SoundBible_com_1655839472);
+                printError.Play();
             }
         }
 
@@ -131,7 +134,7 @@ namespace cashRegister
             printThree.Play();
 
             receiptOutput.Text += $"\n\n Backpacks        X {backpackAmount} @ ${backpackPrice.ToString(".00")}";
-            Thread.Sleep(1000); 
+            Thread.Sleep(1000);
             this.Refresh();
             SoundPlayer printFour = new SoundPlayer(Properties.Resources.printTwo);
             printFour.Play();
@@ -148,7 +151,7 @@ namespace cashRegister
             SoundPlayer printSix = new SoundPlayer(Properties.Resources.printTwo);
             printSix.Play();
 
-            receiptOutput.Text += $"\n\n Total                  {taxTotal.ToString ("C")}";
+            receiptOutput.Text += $"\n\n Total                  {taxTotal.ToString("C")}";
             Thread.Sleep(1000);
             this.Refresh();
             SoundPlayer printSeven = new SoundPlayer(Properties.Resources.printTwo);
@@ -168,7 +171,7 @@ namespace cashRegister
 
             receiptOutput.Text += $"\n\n Thank you for your purchase!          ";
             Thread.Sleep(1000);
-            this.Refresh(); 
+            this.Refresh();
             receiptOutput.Text += $"\n Have a great day   :)                          ";
             Thread.Sleep(1000);
             this.Refresh();
@@ -220,5 +223,5 @@ namespace cashRegister
 
         }
     }
-    }
+}
 
